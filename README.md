@@ -1,2 +1,4 @@
-# stm_application
-# Repository which have stm driver and applications.
+# STM Repository
+stm_application
+stm driver
+scripts
