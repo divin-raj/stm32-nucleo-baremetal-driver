@@ -13,6 +13,5 @@ $ make clean
 
 $ make burn
  
-$ arm-none-eabi-gcc -T./LinkerScript.ld --specs=nosys.specs ./main.c startup_stm32.s -o application.elf
 
 
