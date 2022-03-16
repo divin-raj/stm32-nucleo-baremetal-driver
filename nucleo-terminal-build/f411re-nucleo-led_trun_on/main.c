@@ -19,15 +19,29 @@
 
 #define GPIOA_CLKEN(val)    ((*(volatile uint32_t *)RCC_BASE)  |= (1u << val))   /* Enabling GPIOA CLK */
 #define GPIOA_ODR_WR(pin)   ((*(volatile uint32_t *)GPIOA_ODR) |= (1u << pin))   /* Writing Output Data Register */
+<<<<<<< HEAD
+=======
+#define GPIOA_ODR_TG(pin)   ((*(volatile uint32_t *)GPIOA_ODR) ^= (1u << 5))     /* Writing Output Data Register */
+>>>>>>> f7faf8367744c43cc94477bae4da361eb8bf6196
 #define GPIOA_MOD_WR(pin)   ((*(volatile uint32_t *)GPIOA_MOD) |= (1u << 2*pin)) /* Setting Output Mode */
 
 int main()
 {
 	int idx = 0;
+<<<<<<< HEAD
 
 	GPIOA_CLKEN(0);     /* 0 - GPIOA CLOCK ENABLE PIN  */  
 	GPIOA_MOD_WR(5u);   /* 5 - PIN NUMBER FOR USER LED */
 	GPIOA_ODR_TG(5u);
 
+=======
+	GPIOA_CLKEN(0);  /* 0 - GPIOA CLOCK ENABLE PIN  */  
+	GPIOA_MOD_WR(5u); /* 5 - PIN NUMBER FOR USER LED */
+	while(1)
+	{
+		for(idx = 0; idx < 500000; idx++);
+		GPIOA_ODR_TG(5u);
+	}
+>>>>>>> f7faf8367744c43cc94477bae4da361eb8bf6196
 	return 0;
 } 
