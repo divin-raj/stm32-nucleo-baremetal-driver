@@ -1,4 +1,3 @@
-# STM Repository
-stm_application
-stm driver
-scripts
+# stm32-nucleo-baremetal-driver
+
+includes both terminal build and IDE usecase 
