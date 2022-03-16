@@ -27,7 +27,7 @@ int main()
 
 	GPIOA_CLKEN(0);     /* 0 - GPIOA CLOCK ENABLE PIN  */  
 	GPIOA_MOD_WR(5u);   /* 5 - PIN NUMBER FOR USER LED */
-	GPIOA_ODR_TG(5u);
-
+	GPIOA_MOD_WR(5u); /* 5 - PIN NUMBER FOR USER LED */
+	
 	return 0;
 } 
